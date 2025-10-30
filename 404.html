@@ -1,33 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>404 - Page Not Found</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Lost in Space</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at 50% 30%, #2c3e50, #000);
+      color: #ecf0f1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
       text-align: center;
-      padding: 50px;
-      background-color: #f8f9fa;
     }
-    h1 { font-size: 100px; color: #e74c3c; margin-bottom: 10px; }
-    h2 { font-size: 30px; color: #555; }
+    h1 {
+      font-size: 8rem;
+      color: #e74c3c;
+      margin: 0;
+      animation: float 3s ease-in-out infinite;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: #f1c40f;
+    }
+    p {
+      max-width: 500px;
+      margin-top: 1rem;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
     a {
+      margin-top: 2rem;
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #3498db;
+      background: #9b59b6;
       color: white;
+      padding: 12px 25px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
-    a:hover { background: #2980b9; }
+    a:hover {
+      background: #f39c12;
+      transform: scale(1.1);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    .emoji {
+      font-size: 3rem;
+      animation: spin 6s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
   <h1>404</h1>
-  <h2>Oops! Page not found</h2>
-  <p>The page you're looking for doesn't exist or has been moved.</p>
+  <h2>🚀 Oops! You drifted off course</h2>
+  <p>Looks like the page you’re trying to reach doesn’t exist in this galaxy.<br>
+  Don’t worry — let's teleport you back to safety.</p>
+  <div class="emoji">🪐</div>
   <p>Contact: <!--email_off-->23f1000455@ds.study.iitm.ac.in<!--/email_off--></p>
-  <a href="/">← Go back home</a>
+  <a href="/">← Return Home</a>
 </body>
 </html>
