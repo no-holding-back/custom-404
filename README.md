@@ -1,2 +1,3 @@
-# custom-404
-Custom 404 page for TDS Make-up GA Sep 2025 Term
+# Custom 404 GitHub Pages Site
+Created by 23f1000455@ds.study.iitm.ac.in
+This repository hosts a simple website with a creative custom 404 page.
