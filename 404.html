@@ -1,77 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 - Lost in Space</title>
   <style>
     body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: radial-gradient(circle at 50% 30%, #2c3e50, #000);
-      color: #ecf0f1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
+      background: radial-gradient(circle at center, #000, #0b0020);
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
+      padding: 80px 20px;
+      overflow: hidden;
     }
     h1 {
-      font-size: 8rem;
-      color: #e74c3c;
-      margin: 0;
-      animation: float 3s ease-in-out infinite;
+      font-size: 7rem;
+      color: #ff66b2;
+      text-shadow: 0 0 20px #f107a3, 0 0 40px #7b2ff7;
+      margin-bottom: 0;
+      animation: pulse 2.5s infinite alternate;
     }
     h2 {
       font-size: 2rem;
-      margin-top: 1rem;
-      color: #f1c40f;
+      color: #d1c4e9;
+      margin-top: 10px;
     }
     p {
-      max-width: 500px;
-      margin-top: 1rem;
-      line-height: 1.5;
-      opacity: 0.9;
+      font-size: 1.2rem;
+      color: #ccc;
+      margin: 20px auto;
+      max-width: 600px;
     }
     a {
-      margin-top: 2rem;
       display: inline-block;
-      background: #9b59b6;
+      text-decoration: none;
+      background: linear-gradient(90deg, #7b2ff7, #f107a3);
       color: white;
       padding: 12px 25px;
-      text-decoration: none;
       border-radius: 30px;
-      font-weight: 600;
-      transition: all 0.3s ease;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #7b2ff7;
     }
     a:hover {
-      background: #f39c12;
-      transform: scale(1.1);
+      box-shadow: 0 0 20px #f107a3, 0 0 40px #7b2ff7;
+      transform: scale(1.05);
     }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+    @keyframes pulse {
+      0% { text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2; }
+      100% { text-shadow: 0 0 20px #f107a3, 0 0 40px #7b2ff7; }
     }
-    .emoji {
-      font-size: 3rem;
-      animation: spin 6s linear infinite;
-      display: inline-block;
+    .stars {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      opacity: 0.2;
+      animation: drift 100s linear infinite;
+      z-index: -1;
     }
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    @keyframes drift {
+      from { background-position: 0 0; }
+      to { background-position: 10000px 5000px; }
     }
   </style>
 </head>
 <body>
+  <div class="stars"></div>
   <h1>404</h1>
-  <h2>🚀 Oops! You drifted off course</h2>
-  <p>Looks like the page you’re trying to reach doesn’t exist in this galaxy.<br>
-  Don’t worry — let's teleport you back to safety.</p>
-  <div class="emoji">🪐</div>
-  <p>Contact: <!--email_off-->23f1000455@ds.study.iitm.ac.in<!--/email_off--></p>
-  <a href="/">← Go back Home</a>
+  <h2>🚀 Lost in Space</h2>
+  <p>It seems you've ventured beyond the known galaxies of this site. The stars whisper that the page you seek doesn't exist.</p>
+  <p>Contact Mission Control: <!--email_off-->23f1000455@ds.study.iitm.ac.in<!--/email_off--></p>
+  <a href="./">🪐 Return to Base</a>
 </body>
 </html>
