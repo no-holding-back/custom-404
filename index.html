@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to My Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to My Cosmic Site</title>
   <style>
     body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #8e44ad, #3498db);
-      color: white;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background: radial-gradient(circle at top, #1a1a40, #000);
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
+      padding: 100px 20px;
+      overflow: hidden;
     }
     h1 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
-      animation: fadeIn 1.5s ease;
+      color: #ff99cc;
+      text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2;
+      animation: float 3s ease-in-out infinite;
     }
     p {
       font-size: 1.2rem;
-      opacity: 0.9;
+      color: #d1d1e0;
+      margin: 20px auto;
+      max-width: 600px;
     }
     a {
-      margin-top: 1.5rem;
-      padding: 12px 25px;
-      background: white;
-      color: #8e44ad;
+      display: inline-block;
+      margin-top: 25px;
       text-decoration: none;
-      border-radius: 25px;
-      font-weight: 600;
-      transition: all 0.3s ease;
+      background: linear-gradient(90deg, #7b2ff7, #f107a3);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #7b2ff7;
     }
     a:hover {
-      background: #f1c40f;
-      color: #2c3e50;
-      transform: scale(1.1);
+      box-shadow: 0 0 20px #f107a3, 0 0 40px #7b2ff7;
+      transform: scale(1.05);
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .stars {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      opacity: 0.2;
+      animation: drift 100s linear infinite;
+      z-index: -1;
+    }
+    @keyframes drift {
+      from { background-position: 0 0; }
+      to { background-position: 10000px 5000px; }
     }
   </style>
 </head>
 <body>
-  <h1>🌸 Welcome to My Site 🌸</h1>
-  <p>Explore and have fun while you're here!</p>
+  <div class="stars"></div>
+  <h1>🌌 Welcome, Space Explorer! 🌌</h1>
+  <p>You've landed on a quiet corner of the digital cosmos. Take a look around, stay as long as you like — the stars aren’t in a hurry.</p>
   <p>Contact: <!--email_off-->23f1000455@ds.study.iitm.ac.in<!--/email_off--></p>
-  <a href="nonexistent-page">Go to a missing page (test 404)</a>
+  <a href="nonexistent-page">🚀 Launch into the Unknown (Test 404)</a>
 </body>
 </html>
